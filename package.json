@@ -1,7 +1,6 @@
 {
   "name": "dsh-haoba-mode",
   "version": "0.1.0",
-  "private": true,
   "description": "豪霸模式 (Haoba Mode) for DeepSeek Harness: one gold switch beside the composer that pushes every model step to its maximum effort and token budget, with an exhaustive no-shortcuts working discipline.",
   "type": "module",
   "main": "lib/index.js",
@@ -27,6 +26,15 @@
     "max-effort"
   ],
   "license": "MIT",
+  "author": "Jiasheng Fu",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FelixJiashengFu/dsh-haoba-mode.git"
+  },
+  "homepage": "https://github.com/FelixJiashengFu/dsh-haoba-mode#readme",
+  "bugs": {
+    "url": "https://github.com/FelixJiashengFu/dsh-haoba-mode/issues"
+  },
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"

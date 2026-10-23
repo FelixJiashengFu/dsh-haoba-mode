@@ -7,6 +7,16 @@
 - **关**：一切照旧，插件只在后台待命。
 - **开**：从下一条消息开始，每一步模型调用都被推到该模型支持的上限，并在系统提示里追加一段「豪霸纪律」。
 
+## 安装
+
+在 DeepSeek Harness 里打开 **插件 → 添加插件**，粘贴下面的仓库地址，点 **安装**，装好后点 **立即启用**：
+
+```
+https://github.com/FelixJiashengFu/dsh-haoba-mode
+```
+
+输入框旁随即出现金色的「豪霸」开关。升级：在插件页卸载后，用同一个地址重新安装。
+
 ## 它到底做了什么
 
 | 杠杆 | 实现 | 效果 |
@@ -49,15 +59,15 @@ icon.svg            金色皇冠
 
 `applied` 是最近一次真正改过的调用参数，开关的悬浮提示会把它显示出来。
 
-## 安装 / 卸载
+## 本地开发与卸载
 
-安装交给 Harness 的插件管理器（不要手改 profile 的 `package.json`）：
+本地开发：克隆本仓库后，在 **添加插件** 里填本目录的绝对路径，或让 agent 调用插件管理器（不要手改 profile 的 `package.json`）：
 
 ```
 plugin_manager action=install_bundle target=<本目录绝对路径>
 ```
 
-卸载：`plugin_manager action=remove_bundle target=dsh-haoba-mode`。
+卸载：在插件页卸载，或 `plugin_manager action=remove_bundle target=dsh-haoba-mode`。
 
 ## 代价
 
