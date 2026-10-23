@@ -1,0 +1,42 @@
+{
+  "name": "dsh-haoba-mode",
+  "version": "0.1.0",
+  "private": true,
+  "description": "豪霸模式 (Haoba Mode) for DeepSeek Harness: one gold switch beside the composer that pushes every model step to its maximum effort and token budget, with an exhaustive no-shortcuts working discipline.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "lib/",
+    "locale/*.json",
+    "icon.svg",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "haoba",
+    "mode",
+    "max-effort"
+  ],
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}

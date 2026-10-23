@@ -1,0 +1,6 @@
+# The host half of 豪霸模式. Its `dsh.client` field in package.json tells the
+# loader to also ship lib/client.js to the Web client, which paints the gold
+# switch beside the composer.
+- insert:
+    - id: haoba-mode
+      name: dsh-haoba-mode
